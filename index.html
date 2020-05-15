@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+                <meta content="ie=edge" http-equiv="X-UA-Compatible">
+                    <!-- Bootstrap CDN -->
+                    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+                        <!-- Custom stylesheet -->
+                        <link href="main.css" rel="stylesheet">
+                            <!-- Custom Javascript -->
+                            <script src="main.js">
+                            </script>
+                            <script src="https://peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+                            <title>
+                                RSA Protected Chat
+                            </title>
+                        </link>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body">
+        <h5 class="myName">
+            Leonardo Moya - 152037
+        </h5>
+        <div class="container">
+            <h1 class="myTitle">
+                RSA Protected Chat
+            </h1>
+            <div class="btn-group btn-group-lg toCenter">
+                <button class="btn btn-primary" onclick="showModal()">
+                    Connect
+                </button>
+                <button class="btn btn-secondary" onclick="disconnect()">
+                    Disconnect
+                </button>
+            </div>
+            <div class="row rowPadding">
+                <div>
+                    <h3 class="myTitle">
+                        User List
+                    </h3>
+                    <div class="myTable" id="table-container">
+                        <a class = "drop-btn" id="main" href = "#" onclick="redirect(this.id)">main</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="myTitle">
+                        Chat
+                    </h3>
+                    <div class="card myCard scroll">
+                        <div class="card-body" id="outputHTML">
+                        </div>
+                    </div>
+                    <form action="#">
+                        <input class="input" name="txt" onkeypress="handle(event)" type="text"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-example-modal-sm" id="modalServer" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Select server to connect
+                        </h5>
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    Size:
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <input autocomplete="off" class="form-control" id="url2" type="url" value="http://localhost"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <form>
+                            <div class="form-group">
+                                <button class="btn btn-dark btn-sm" data-dismiss="modal" onclick="getData()" type="button">
+                                    Go
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="http://code.jquery.com/jquery-3.4.1.min.js">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
+        </script>
+    </body>
+</html>
